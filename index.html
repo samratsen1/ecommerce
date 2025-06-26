@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Headphones | TechGear</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./images/bug-fill.svg" alt="TechGear" height="30" />
+        </a>
+        <div class="d-flex align-items-center">
+          <a href="#" class="btn btn-outline-dark me-2">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="btn btn-primary">Sign In</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="product-detail py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Product Images -->
+          <div class="col-lg-6">
+            <div class="main-image mb-4 text-center">
+              <img
+                id="mainImage"
+                src="./images/headphone.jpg"
+                alt="Wireless Headphones"
+                class="img-fluid"
+                style="max-height: 400px"
+              />
+            </div>
+            <div class="thumbnail-row d-flex justify-content-center">
+              <div class="thumbnail mx-2">
+                <img
+                  src="./images/headphone1.jpg"
+                  alt="Thumbnail 1"
+                  class="img-thumbnail"
+                  onclick="changeImage('images/headphone1.jpg')"
+                />
+              </div>
+              <div class="thumbnail mx-2">
+                <img
+                  src="./images/headphone3.jpg"
+                  alt="Thumbnail 2"
+                  class="img-thumbnail"
+                  onclick="changeImage('images/headphone3.jpg')"
+                />
+              </div>
+              <div class="thumbnail mx-2">
+                <img
+                  src="./images/headphone4.jpg"
+                  alt="Thumbnail 3"
+                  class="img-thumbnail"
+                  onclick="changeImage('images/headphone4.jpg')"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="col-lg-6">
+            <div class="product-info">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Electronics</a></li>
+                  <li class="breadcrumb-item"><a href="#">Audio</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Headphones
+                  </li>
+                </ol>
+              </nav>
+
+              <h1 class="product-title">Premium Wireless Headphones</h1>
+              <div class="rating mb-3">
+                <span class="text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="ms-2">4.5 (128 reviews)</span>
+              </div>
+
+              <div class="price mb-4">
+                <h2 class="text-primary">$149.99</h2>
+                <del class="text-muted">$199.99</del>
+                <span class="badge bg-danger ms-2">25% OFF</span>
+              </div>
+
+              <div class="description mb-4">
+                <p>
+                  Experience crystal-clear sound with our premium wireless
+                  headphones. Featuring active noise cancellation, 30-hour
+                  battery life, and ultra-comfortable ear cushions.
+                </p>
+                <ul>
+                  <li>Bluetooth 5.0 with 30ft range</li>
+                  <li>Active Noise Cancellation (ANC)</li>
+                  <li>30-hour battery life</li>
+                  <li>Built-in microphone for calls</li>
+                  <li>Foldable design with carrying case</li>
+                </ul>
+              </div>
+
+              <div class="options mb-4">
+                <div class="mb-3">
+                  <label class="form-label"><strong>Color:</strong></label>
+                  <div class="d-flex">
+                    <div class="form-check me-3">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="color"
+                        id="colorBlack"
+                        checked
+                      />
+                      <label class="form-check-label" for="colorBlack"
+                        >Black</label
+                      >
+                    </div>
+                    <div class="form-check me-3">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="color"
+                        id="colorWhite"
+                      />
+                      <label class="form-check-label" for="colorWhite"
+                        >White</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="color"
+                        id="colorBlue"
+                      />
+                      <label class="form-check-label" for="colorBlue"
+                        >Blue</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label"><strong>Quantity:</strong></label>
+                  <div
+                    class="d-flex align-items-center"
+                    style="max-width: 150px"
+                  >
+                    <button class="btn btn-outline-secondary" id="decreaseQty">
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      class="form-control text-center mx-2"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                    />
+                    <button class="btn btn-outline-secondary" id="increaseQty">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions d-flex">
+                <button class="btn btn-primary btn-lg me-3">
+                  <i class="fas fa-shopping-cart me-2"></i> Add to Cart
+                </button>
+                <button class="btn btn-outline-secondary btn-lg">
+                  <i class="fas fa-heart me-2"></i> Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Product Features</h2>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-headphones-alt fa-3x text-primary"></i>
+            </div>
+            <h4>Superior Sound</h4>
+            <p>
+              40mm drivers deliver rich, balanced audio across all frequencies.
+            </p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-volume-off fa-3x text-primary"></i>
+            </div>
+            <h4>Active Noise Cancellation</h4>
+            <p>Block out distractions with advanced ANC technology.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-battery-full fa-3x text-primary"></i>
+            </div>
+            <h4>Long Battery Life</h4>
+            <p>Up to 30 hours of playtime on a single charge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Customer Reviews</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="rating mb-3">
+                  <span class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+                <h5 class="card-title">Best headphones I've owned!</h5>
+                <p class="card-text">
+                  The sound quality is amazing and the noise cancellation works
+                  perfectly. Battery life is impressive too.
+                </p>
+                <p class="text-muted">- Sarah J.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="rating mb-3">
+                  <span class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </span>
+                </div>
+                <h5 class="card-title">Comfortable for long sessions</h5>
+                <p class="card-text">
+                  I wear these for 8+ hours daily and they remain comfortable.
+                  Sound quality is excellent for the price.
+                </p>
+                <p class="text-muted">- Michael T.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="rating mb-3">
+                  <span class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </span>
+                </div>
+                <h5 class="card-title">Great value</h5>
+                <p class="card-text">
+                  Compared to more expensive brands, these offer excellent
+                  performance at a fraction of the cost.
+                </p>
+                <p class="text-muted">- David L.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
